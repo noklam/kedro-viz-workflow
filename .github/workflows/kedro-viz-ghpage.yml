@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # - uses: ../../kedro-viz-ghpage
+      - uses: ../../kedro-viz-ghpage
         # with:
         # input params if there is any
