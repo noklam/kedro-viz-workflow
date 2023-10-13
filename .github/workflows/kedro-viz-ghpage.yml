@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: noklam/kedro-viz-workflow/kedro-viz-ghpage
+      - uses: noklam/kedro-viz-workflow/kedro-viz-ghpage@main
         # with:
         # input params if there is any
