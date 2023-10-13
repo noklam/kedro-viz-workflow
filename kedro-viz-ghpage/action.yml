@@ -35,7 +35,7 @@ runs:
         git checkout noklam/github-page-action
         pip install -e package
         cd ..
-        pip install src
+        pip install -e src
         pip install -U fsspec
         kedro viz-build
     - name: Deploy to GitHub Pages
