@@ -1,0 +1,22 @@
+{
+  "nodes": [],
+  "edges": [],
+  "layers": [],
+  "tags": [],
+  "pipelines": [
+    {
+      "id": "__default__",
+      "name": "__default__"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": []
+    }
+  },
+  "selected_pipeline": "__default__"
+}
