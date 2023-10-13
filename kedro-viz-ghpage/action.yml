@@ -31,8 +31,12 @@ runs:
       run: |
         set -ux
         python -m pip install --upgrade pip
-        pip install "git+https://github.com/kedro-org/kedro-viz.git@noklam/github-page-action#egg=kedro-viz&subdirectory=package"
+        git clone https://github.com/kedro-org/kedro-viz.git
+        cd kedro-viz
+        git checkout noklam/github-page-action
+        pip install -e package
         pip install -U fsspec
+        cd ..
         kedro viz-build
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
