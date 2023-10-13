@@ -26,7 +26,6 @@ runs:
     - name: Install Dependencies
       env:
         USE_PRE: ${{ inputs.pre }}
-        TORCH_CPU: "${{ inputs.torch_cpu }}"
       shell: bash
       run: |
         set -ux
@@ -35,8 +34,9 @@ runs:
         cd kedro-viz
         git checkout noklam/github-page-action
         pip install -e package
-        pip install -U fsspec
         cd ..
+        pip install src
+        pip install -U fsspec
         kedro viz-build
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -48,4 +48,3 @@ runs:
         # You can swap them out with your own user credentials.
         user_name: github-actions[bot]
         user_email: 41898282+github-actions[bot]@users.noreply.github.com
-
