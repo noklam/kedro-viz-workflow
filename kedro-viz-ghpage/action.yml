@@ -31,7 +31,8 @@ runs:
       run: |
         set -ux
         python -m pip install --upgrade pip
-        pip install -U kedro-viz fsspec
+        pip install git+https://github.com/kedro-org/kedro-viz.git@noklam/github-page-action
+        pip install -U fsspec
         kedro viz-build
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
