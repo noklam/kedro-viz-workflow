@@ -31,7 +31,7 @@ runs:
       run: |
         set -ux
         python -m pip install --upgrade pip
-        pip install git+https://github.com/kedro-org/kedro-viz.git#egg=kedro-viz&subdirectory=package@noklam/github-page-action
+        pip install "git+https://github.com/kedro-org/kedro-viz.git@noklam/github-page-action#egg=kedro-viz&subdirectory=package"
         pip install -U fsspec
         kedro viz-build
     - name: Deploy to GitHub Pages
