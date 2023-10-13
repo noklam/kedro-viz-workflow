@@ -1,0 +1,16 @@
+{
+  "code": "def split_data(\n    data: pd.DataFrame, parameters: Dict[str, Any]\n) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series]:\n    \"\"\"Splits data into features and target training and test sets.\n\n    Args:\n        data: Data containing features and target.\n        parameters: Parameters defined in parameters.yml.\n    Returns:\n        Split data.\n    \"\"\"\n\n    data_train = data.sample(\n        frac=parameters[\"train_fraction\"], random_state=parameters[\"random_state\"]\n    )\n    data_test = data.drop(data_train.index)\n\n    X_train = data_train.drop(columns=parameters[\"target_column\"])\n    X_test = data_test.drop(columns=parameters[\"target_column\"])\n    y_train = data_train[parameters[\"target_column\"]]\n    y_test = data_test[parameters[\"target_column\"]]\n\n    return X_train, X_test, y_train, y_test\n",
+  "filepath": "kedro-viz-workflow/src/kedro_viz_ghpages/pipelines/main/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes=split",
+  "inputs": [
+    "example_iris_data",
+    "parameters"
+  ],
+  "outputs": [
+    "X_train",
+    "X_test",
+    "y_train",
+    "y_test"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "code": "def report_accuracy(y_pred: pd.Series, y_test: pd.Series):\n    \"\"\"Calculates and logs the accuracy.\n\n    Args:\n        y_pred: Predicted target.\n        y_test: True target.\n    \"\"\"\n    accuracy = (y_pred == y_test).sum() / len(y_test)\n    logger = logging.getLogger(__name__)\n    logger.info(\"Model has accuracy of %.3f on test data.\", accuracy)\n",
+  "filepath": "kedro-viz-workflow/src/kedro_viz_ghpages/pipelines/main/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes=report_accuracy",
+  "inputs": [
+    "y_pred",
+    "y_test"
+  ],
+  "outputs": []
+}

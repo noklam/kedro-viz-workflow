@@ -1,0 +1,251 @@
+{
+  "nodes": [
+    {
+      "id": "3b9307e0",
+      "name": "split",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "7fe1d536",
+      "name": "example_iris_data",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "f1f1425b",
+      "name": "parameters",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "parameters",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "cae2d1c7",
+      "name": "X_train",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "872981f9",
+      "name": "X_test",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "9ca016a8",
+      "name": "y_train",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "f6d9538c",
+      "name": "y_test",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "8c1babeb",
+      "name": "make_predictions",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "6d4fba55",
+      "name": "y_pred",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "f4f70eae",
+      "name": "report_accuracy",
+      "tags": [],
+      "pipelines": [
+        "__default__",
+        "main"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "872981f9",
+      "target": "8c1babeb"
+    },
+    {
+      "source": "3b9307e0",
+      "target": "9ca016a8"
+    },
+    {
+      "source": "3b9307e0",
+      "target": "872981f9"
+    },
+    {
+      "source": "6d4fba55",
+      "target": "f4f70eae"
+    },
+    {
+      "source": "7fe1d536",
+      "target": "3b9307e0"
+    },
+    {
+      "source": "3b9307e0",
+      "target": "f6d9538c"
+    },
+    {
+      "source": "cae2d1c7",
+      "target": "8c1babeb"
+    },
+    {
+      "source": "9ca016a8",
+      "target": "8c1babeb"
+    },
+    {
+      "source": "f1f1425b",
+      "target": "3b9307e0"
+    },
+    {
+      "source": "f6d9538c",
+      "target": "f4f70eae"
+    },
+    {
+      "source": "8c1babeb",
+      "target": "6d4fba55"
+    },
+    {
+      "source": "3b9307e0",
+      "target": "cae2d1c7"
+    }
+  ],
+  "layers": [],
+  "tags": [],
+  "pipelines": [
+    {
+      "id": "__default__",
+      "name": "__default__"
+    },
+    {
+      "id": "main",
+      "name": "main"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "9ca016a8",
+          "type": "data"
+        },
+        {
+          "id": "cae2d1c7",
+          "type": "data"
+        },
+        {
+          "id": "8c1babeb",
+          "type": "task"
+        },
+        {
+          "id": "7fe1d536",
+          "type": "data"
+        },
+        {
+          "id": "6d4fba55",
+          "type": "data"
+        },
+        {
+          "id": "f6d9538c",
+          "type": "data"
+        },
+        {
+          "id": "f4f70eae",
+          "type": "task"
+        },
+        {
+          "id": "872981f9",
+          "type": "data"
+        },
+        {
+          "id": "3b9307e0",
+          "type": "task"
+        },
+        {
+          "id": "f1f1425b",
+          "type": "parameters"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "__default__"
+}
