@@ -1,0 +1,4 @@
+  steps:
+    - uses: ../../kedro-viz-ghpage
+      with:
+       # input params if there is any
