@@ -11,3 +11,4 @@ jobs:
       - uses: noklam/kedro-viz-workflow/kedro-viz-ghpage@main
         # with:
         # input params if there is any
+
